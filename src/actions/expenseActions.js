@@ -2,14 +2,14 @@ import * as types from './actionTypes';
 
 export function addExpense(exp) {
   return {
-    type: types.ADD_USER,
+    type: types.ADD_EXPENSE,
     payload: exp,
   };
 }
 
-// export function verifyUser(usr) {
-//   return {
-//     type: types.VERIFY_USER,
-//     usr,
-//   };
-// }
+export function getExpenses(exp) {
+  return {
+    type: types.GET_EXPENSE,
+    payload: exp,
+  };
+}

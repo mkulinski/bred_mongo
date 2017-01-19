@@ -13,3 +13,17 @@ export function verifyUser(usr) {
     usr,
   };
 }
+
+export function addExpense(exp) {
+  return {
+    type: types.ADD_EXPENSE,
+    payload: exp,
+  };
+}
+
+export function getExpenses(exp) {
+  return {
+    type: types.GET_EXPENSE,
+    payload: exp,
+  };
+}

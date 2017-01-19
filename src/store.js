@@ -8,10 +8,10 @@ import reducers from './reducers/reducers';
 
 const defaultState = {
   user: { username: 'mkulinski',
-          email: 'me@michaelkulinski.com',
-          income: 134123,
-          loading: false,
-          error: null,
+    email: 'me@michaelkulinski.com',
+    income: 134123,
+    loading: false,
+    error: null,
   },
   expenses: [],
 };
