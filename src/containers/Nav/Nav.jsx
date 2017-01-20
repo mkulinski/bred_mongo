@@ -5,6 +5,7 @@ const Nav = (props) => {
   return (
     <nav className="nav">
       <ul>
+        <li><Link to="/home" className="logo">Bred</Link></li>
         <li><Link to="/dashboard">Dashboard</Link></li>
         <li><Link to="/login">Login</Link></li>
         <li><Link to="/signup">Signup</Link></li>
