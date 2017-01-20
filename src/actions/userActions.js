@@ -11,7 +11,7 @@ export function changeUserInfo(username, email) {
 
 function getUserExpenses(username) {
   return (dispatch) => {
-    axios.get(`http://localhost:3000/api/user/${username}/expense`)
+    axios.get(`http://localhost:3000/expense/${username}`)
     .then((response) => {
       dispatch({ type: 'SET_USER_EXPENSES', payload: response.data });
     })
@@ -24,7 +24,7 @@ function getUserExpenses(username) {
 
 export function sendLoginData(userObj) {
   return (dispatch) => {
-    axios.post('http://localhost:3000/login', userObj)
+    axios.get(`http://localhost:3000/login/${userObj.username}/${userObj.password}`)
     .then((response) => {
       dispatch({ type: 'SEND_LOGIN_DATA_SUCCESS', payload: response.data });
     })

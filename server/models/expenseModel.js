@@ -12,11 +12,11 @@ const expenseSchema = new Schema({
     required: true,
   },
   amount: {
-    type: String,
+    type: Number,
     required: true,
   },
   date: {
-    type: String,
+    type: Date,
     required: false,
   },
   recurring: {
@@ -25,7 +25,7 @@ const expenseSchema = new Schema({
   },
   username: {
     type: String,
-    required: false,
+    required: true,
   },
 });
 

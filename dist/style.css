@@ -9,12 +9,8 @@ body {
   background: #fff;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 800;
-}
-
-.expenses {
-  text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
 }
 
 .component-container {
@@ -41,6 +37,13 @@ h1, h2, h3, h4, h5 {
 .submit {
   width: 100%;
   height: 2.5em;
+}
+
+.submit:hover {
+  background-color: #37FDFC;
+  cursor: pointer;
+  color: #000;
+  border: 1px solid #444;
 }
 
 a {
@@ -210,12 +213,29 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
+  z-index: -100;
   transform: translateX(-50%) translateY(-50%);
   background-size: cover;
   transition: 1s opacity;
-  z-index: -1;
 }
 /*.home-main {
   position: fixed;
   top: 0;
+}*/
+
+/* Signup */
+.login-link:hover {
+  color: #37FDFC;
+}
+
+/* Dashboard */
+.expenses {
+  margin-top: 5em;
+  text-align: center;
+}
+/*.dashboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }*/

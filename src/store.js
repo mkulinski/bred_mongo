@@ -7,13 +7,21 @@ import promise from 'redux-promise-middleware';
 import reducers from './reducers/reducers';
 
 const defaultState = {
-  user: { username: 'mkulinski',
-    email: 'me@michaelkulinski.com',
+  user: { username: 'mlampe',
+    email: 'me@mlampe.com',
     income: 134123,
     loading: false,
     error: null,
   },
-  expenses: [],
+  expenses: [
+    {
+      title: "mo mo food",
+      category: "food",
+      amount: "1200",
+      recurring: false,
+      username: "mlampe"
+    },
+  ],
 };
 
 const newRouter = routerMiddleware(browserHistory);

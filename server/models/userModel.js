@@ -17,7 +17,7 @@ const userSchema = new Schema({
     required: true,
   },
   income: {
-    type: String,
+    type: Number,
     required: false,
   },
 });

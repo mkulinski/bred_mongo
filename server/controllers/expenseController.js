@@ -1,8 +1,9 @@
 const Expense = require('../models/expenseModel');
 
 function getAllExpenses(req, res) {
-  Expense.findOne({ username: req.params.username }, (err, expenses) => {
+  Expense.find({ username: req.params.username }, (err, expenses) => {
     if (err) return res.send(new Error('cannot find user expenses'));
+    console.log('expenses', expenses)
     return res.json(expenses);
   });
 }

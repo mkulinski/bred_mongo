@@ -10,7 +10,7 @@ userController.checkLogin = (req, res) => {
   User.findOne({ username: req.params.username }, (err, user) => {
     if (err) return res.send(new Error('cannot find user'));
     if (req.params.password === user.password) {
-      return res.json({ status: 'successful' });
+      return res.json(user);
     }
 
     return res.json({ status: 'failed' });
@@ -26,7 +26,7 @@ userController.restrict = (req, res, next) => {
   }
 };
 
-userController.createUser = (req, res, next) => {
+userController.createUser = (req, res) => {
   User.create(new User(req.body), (err, userResult) => {
     if (err) {
       return res.status(401).json({ err });

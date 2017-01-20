@@ -6,6 +6,8 @@ import store, { history } from './store';
 import App from './containers/App';
 import Home from './components/Home';
 import Login from './components/Login';
+import Signup from './components/Signup';
+import DashBoard from './components/DashBoard';
 
 render((
   <Provider store={store}>
@@ -13,6 +15,8 @@ render((
       <Route path="/" component={App}>
         <IndexRoute component={Home} />
         <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+        <Route path="/Dashboard" component={DashBoard} />
       </Route>
     </Router>
   </Provider>
