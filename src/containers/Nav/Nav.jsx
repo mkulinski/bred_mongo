@@ -1,17 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { verifyUser, addUser } from '../../actions/userActions';
+import { Link } from 'react-router';
 
 const Nav = (props) => {
   console.log(props);
   return (
-    <div>
+    <nav className="nav">
       <ul>
-        <li>Home</li>
-        <li>Profile</li>
-        <li>Login/Log out</li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/signup">Signup</Link></li>
+        <li><Link to="/profile">Profile</Link></li>
+        <li><Link to="/expense">Expenses</Link></li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

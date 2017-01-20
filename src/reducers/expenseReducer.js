@@ -1,15 +1,16 @@
 import * as types from '../actions/actionTypes';
 
-const initialState = {
-  username: '',
-  expenses: ['boo'],
-};
+// const initialState = {
+//   username: '',
+//   expenses: ['boo'],
+// };
 
-function expenseReducer(state = initialState, action) {
+function expenseReducer(state = [], action) {
   switch (action.type) {
-    case types.ADD_EXPENSE: {
-      return Object.assign({}, state, { expenses: action.payload.exp });
-    }
+    case 'SET_USER_EXPENSES':
+      return Object.assign({}, state, {
+        expenses: action.payload,
+      });
     default:
       return state;
   }
